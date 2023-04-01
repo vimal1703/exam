@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <style>
+html {
+height: 100%;
+}
+body {
+background-image: linear-gradient(#9381f8, rgb(250, 65, 65));
+}
+</style>
+    <p>
+        Create a string with a combination of numbers and characters<br>
+        <hr>
+1. Remove white-space from start and end position.<br>
+<hr>
+2. Fetch the beginning and end characters.<br>
+<hr>
+3. Fetch non-digit characters.<br>
+<hr>
+4. using replace() method change a word in a string.<br>
+<hr>
+string : 1a2b3c4d5e
+    </p>
+    <script>
+        let myString = " 1a2b3c4d5e "; // creating a string with a combination of numbers and characters
+
+myString = myString.trim(); // removing white-space from start and end position
+console.log(myString); // "1a2b3c4d5e"
+
+const firstChar = myString[0]; // fetching the first character
+const lastChar = myString[myString.length - 1]; // fetching the last character
+console.log(`First character: ${firstChar}, Last character: ${lastChar}`); // "First character: 1, Last character: e"
+
+const nonDigits = myString.replace(/\d/g, ''); // fetching non-digit characters
+console.log(`Non-digit characters: ${nonDigits}`); // "Non-digit characters: abced"
+
+myString = myString.replace("3c", "XXX"); // using replace() method to change a word in a string
+console.log(myString); // "1a2bXXX4d5e"
+    </script>
+    
+</body>
+</html>

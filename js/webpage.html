@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        table, th, td {
+           border: 1px solid black;
+        }
+        table {
+            background-color: antiquewhite;
+            
+        }
+        tr{
+            height: 200;
+
+        }
+        body {
+  background-image: url('Image.jpg');
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+     </style>
+</head>
+<body>
+    <script>
+        function get_details() {
+		
+        var name = prompt("Please enter your Name", "Name");
+        var clas = prompt("Please enter your class", "clas");
+        var qualification = prompt("Please enter your qualification", "qualification");
+        var add = prompt("Please enter your add", "add");
+
+        if (name != null) {document.getElementById("name").innerHTML=name;}
+        if (clas != null) {document.getElementById("clas").innerHTML=clas;}
+        if (qualification != null) {document.getElementById("qualification").innerHTML=qualification;}
+        if (add != null) {document.getElementById("add").innerHTML=add;}
+    }
+
+    </script>
+
+    <h1 style="color:red;>My Profile</h1>
+
+
+    <h1 style="color:red;>The table element</h1>
+
+<table style="width:50%" >
+<tr>
+    <th>name</th>
+    <td id ='name'></td>
+</tr>
+<tr>
+    <th>class</th>
+    <td id ='clas'></td>
+</tr>
+<tr>
+    <th>qualification</th>
+    <td id ='qualification'></td>
+</tr>
+<tr>
+    <th>photo</th>
+    <td><p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+        <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+        <p><img id="output" width="200" /></p>
+        
+        <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
+    </td>
+</tr>
+<tr>
+  <th>add</th>
+  <td id ='add'></td>
+  </tr>
+
+</table>
+
+    <button onclick="get_details()">
+		Click me to enter the details!
+	</button>
+    <input type="submit">
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Discount bill creation </h1>
+
+    <script>
+
+        var name = prompt("Enter your name: ");
+        console.log("Name : " + name);
+
+        var mob_no = prompt("Enter your mobile number:");
+        console.log("Mobile Number : " + mob_no);
+
+        var product_name = [];
+        var product_price = [];
+
+        var count = parseInt(prompt("Enter total no. of items:"));
+
+        for (var i=0; i<count; i++) {
+            product_name.push(prompt("Enter Product" + i +" Name : "));
+            product_price.push(parseInt(prompt("Enter Product" + i +" Amount : ")));
+            console.log("Product" + i +" Name : " + product_name.slice(-1));
+            console.log("Product" + i +" Amount : " + product_price.slice(-1));
+        }
+
+        var price = product_price;
+        var total=0;
+        for (let i=0; i<product_price.length; i++) {
+            total += product_price[i];
+        }
+        
+        console.log("Total sum = " + total);
+
+        
+        if (total < 500) {
+            discount_percent = 0
+            discount = (total * discount_percent) / 100
+            final_amount = total - discount
+            console.log("You have " + discount_percent + "% discount")
+            console.log("Discounted Amount = " + final_amount)}
+
+
+        else if (total > 499 && total < 1501) {
+            discount_percent = 10
+            discount = (total * discount_percent) / 100
+            final_amount = total - discount
+            console.log("You have " + discount_percent + "% discount")
+            console.log("Discounted Amount = " + final_amount)}
+
+        else if (total > 1500) {
+            discount_percent = 50
+            discount = (total * discount_percent) / 100
+            final_amount = total - discount
+            console.log("You have " + discount_percent + "% discount")
+            console.log("Discounted Amount = " + final_amount)};
+
+    </script>
+
+</body>
+</html>

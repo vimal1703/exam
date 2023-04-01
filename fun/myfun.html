@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Functions using javascript</h1>
+
+
+
+    <h2>Step 1</h2>
+
+    <script>
+        console.log("Step 1");
+
+        function hello_1() {
+            console.log("Hello Sam! Welcome to this web page...");
+        }
+        hello_1();
+
+    </script>
+
+
+
+    <h2>Step 2</h2>
+
+    <script>
+        console.log("Step 2");
+
+        function hello_2(name) {
+            console.log("Hello "+ name + "! Welcome to this web page...");
+        }
+        hello_2("Sam");
+
+    </script>
+
+
+
+    <h2>Step 3</h2>
+
+    <script>
+        console.log("Step 3");
+
+        var full_name = prompt("Enter your name: ");
+
+        function hello_3(name) {            
+            console.log("Hello "+ name + "! Welcome to this web page...");
+        }
+        hello_3(full_name);
+
+    </script>
+
+
+
+    <h2>Step 4</h2>
+
+    <script>
+        console.log("Step 4");
+
+        var full_name = prompt("Enter your name: ");
+
+        function hello_4(name) {
+            if (full_name == null || full_name == "") {
+                console.log("You didn't give me your name.");
+            }
+            else {
+                console.log("Hello "+ name + "! Welcome to this web page...");
+            }
+        }
+        hello_4(full_name);
+
+    </script>
+
+
+
+    <h2>Step 5</h2>
+
+    <script>
+        console.log("Step 5");
+
+        var full_name = prompt("Enter your name: ");
+
+        function hello_5(name) {
+            return name;
+        }
+        
+        console.log("Hello " + hello_5(full_name) + "! Welcome to this web page...");
+
+    </script>
+
+
+
+    <h2>Step 6</h2>
+
+    <script>   
+        console.log("Step 6");
+
+        function hello_6() {
+            var name = prompt("Enter your name: ");
+
+            return name;
+        }
+
+        var foods = ["Apple", "Orange", "Mango"];
+
+        function hospitality(name, gifts) {
+                for (let i = 0; i < gifts.length; i++) {
+                    console.log("Hello " + name + "! Your gift is " + gifts[i] + ".");
+                }
+        }
+
+        hospitality(hello_6(), foods);
+
+    </script>
+
+
+
+    <h2>Step 7</h2>
+
+    <script>   
+        console.log("Step 7");
+
+        function hello_7() {
+            var name = prompt("Enter your name: ");
+
+            return name;
+        }
+
+        var foods = ["Apple", "Orange", "Mango"];
+
+        function hospitality(name, gifts) {
+            var gift = gifts[Math.floor(Math.random() * gifts.length)];
+
+            console.log("Hello " + name + "! Your gift is " + gift + ".");
+        }
+
+        hospitality(hello_7(), foods);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+    <script>
+        function get_details() {
+		
+        var name = prompt("Please enter your Name", "Name");
+        var gender = prompt("Please enter your Gender", "Gender");
+        var email_ID = prompt("Please enter your Email ID", "Email ID");
+        var dob = prompt("Please enter your DOB", "DOB");
+        var fathers_name = prompt("Please enter your Father's Name", "Father's Name");
+        var address = prompt("Please enter your Address", "Address");
+        var mob_no = prompt("Please enter your Mobile Number", "Mobile Number");
+        var x_percentage = prompt("Please enter your X Percentage", "X Percentage");
+        var xii_percentage = prompt("Please enter your XII Percentage", "XII Percentage");
+        var ug_percentage = prompt("Please enter your UG Percentage", "UG Percentage");
+    
+        if (name != null) {document.getElementById("name").innerHTML=name;}
+        if (gender != null) {document.getElementById("gender").innerHTML=gender;}
+        if (email_ID != null) {document.getElementById("email_ID").innerHTML=email_ID;}
+        if (dob != null) {document.getElementById("dob").innerHTML=dob;}
+        if (fathers_name != null) {document.getElementById("fathers_name").innerHTML=fathers_name;}
+        if (address != null) {document.getElementById("address").innerHTML=address;}
+        if (mob_no != null) {document.getElementById("mob_no").innerHTML=mob_no;}
+        if (x_percentage != null) {document.getElementById("x_percentage").innerHTML=x_percentage;}
+        if (xii_percentage != null) {document.getElementById("xii_percentage").innerHTML=xii_percentage;}
+        if (ug_percentage != null) {document.getElementById("ug_percentage").innerHTML=ug_percentage;}
+    }
+
+    </script>
+
+    <h1>My Profile</h1>
+
+    <p>
+        <b>Name:</b> <i id="name"></i>
+    </p>
+    <p>
+        <b>Gender:</b> <i id="gender"></i>
+    </p>
+    <p>
+        <b>Email ID:</b> <i id="email_ID"></i>
+    </p>
+    <p>
+        <b>Date of Birh:</b> <i id="dob"></i>
+    </p>
+    <p>
+        <b>Father's name:</b> <i id="fathers_name"></i>
+    </p>
+    <p>
+        <b>Address:</b> <i id="address"></i>
+    </p>
+    <p>
+        <b>Mob. No.:</b> <i id="mob_no"></i>
+    </p>
+    <p>
+        <b>X Percentage:</b> <i id="x_percentage"></i>
+    </p>
+    <p>
+        <b>XII Percentage</b> <i id="xii_percentage"></i>
+    </p>
+    <p>
+        <b>Aggregate Percentage in UG:</b> <i id="ug_percentage"></i>
+    </p>
+
+    <button onclick="get_details()">
+		Click me to enter the details!
+	</button>
+    
+
+</body>
+</html>

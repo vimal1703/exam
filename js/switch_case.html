@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Switch Case </h1>      
+
+    <script>
+
+        var num = parseInt(prompt("Enter only a number from keyboard : "));
+        console.log("The given number is " + num);
+
+        switch (true) {
+            case num % 2 == 0:
+                console.log(num + " is even");
+                break;
+                
+            case num % 2 == 1:
+                console.log(num + " is odd");
+                break;
+
+            case num > 0:     
+                console.log(num + " is positive");
+                break;
+                
+            case num < 0:
+                console.log(num + " is negative");
+                break;
+
+            case num == 0:
+                console.log(num + " is zero");
+                break;
+        
+            case 65 <= num <= 90:     
+                console.log(num + " is upper case in ASCII");
+                break;
+                
+            case 97 <= num <= 122:
+                console.log(num + " is lower case in ASCII");
+                break;
+
+            case 48 <= num <= 57:
+                console.log(num + " is digit in ASCII");
+                break;
+
+            default:
+                console.log("Invalid Input");
+        }
+
+    </script>
+
+</body>
+</html>

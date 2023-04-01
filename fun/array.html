@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Array Functionalities</h1>
+
+    <script>
+
+        // Step 1: Create an empty array employee
+        console.log("Step-1:");
+        var employee = new Array();
+        console.log("Employee array created.");
+        console.log(" ");
+
+        // Step 2: Insert 5 employee names into the empty array employee
+        console.log("Step-2:");
+        employee.push("ram", "baba", "vimal", "karthi", "sweety");
+        console.log("Employee names are inserted. ");
+        console.log("They are: " + employee);
+        console.log(" ");
+
+        // Step 3: using for loop access the array elements and print the name of the employee
+        console.log("Step-3:");
+        console.log("The names of all the employee: ");
+        for (let i = 0; i < employee.length; i++) {
+            console.log(employee[i]);
+        }
+        console.log(" ");
+        
+        // Step 4: Implement the below array methods
+        console.log("Step-4:");
+
+        function check(elements) {
+            if (elements.length == 3) {
+                return elements;
+            }
+        }
+
+        // find()
+        console.log("find() - " + employee.find(check));
+        
+        // findIndex()
+        console.log("findIndex() - " + employee.findIndex(check));
+
+        // indexOf()
+        console.log("indexOf() - " + employee.indexOf("ram"));
+        
+        // lastIndexOf()
+        console.log("lastIndexOf() - " + employee.lastIndexOf("raju"));
+
+         // pop()
+        console.log("pop() - " + employee.pop());
+
+        // push()
+        console.log("push() - " + employee.push("ram"));
+
+        // reverse()
+        console.log("reverse() - " + employee.reverse());
+
+        // shift()
+        console.log("shift() - " + employee.shift());
+
+         // sort()
+        console.log("sort() - " + employee.sort());
+
+    </script>
+</body>
+</html>

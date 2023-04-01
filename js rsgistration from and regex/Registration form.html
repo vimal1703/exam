@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+    <style>
+        html {
+        height: 100%;
+        }
+        body {
+        background-image: linear-gradient(#f9f5ff, rgb(255, 255, 255));
+        }
+        </style>
+	<script>
+		function validateForm() {
+			// Get form elements
+			const email = document.getElementById("email").value;
+			const name = document.getElementById("name").value;
+			const phone = document.getElementById("phone").value;
+			const address = document.getElementById("address").value;
+			const dob = document.getElementById("dob").value;
+
+			// Define regular expressions for validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			const nameRegex = /^[a-zA-Z ]+$/;
+			const phoneRegex = /^[0-9]{10}$/;
+			const dobRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+			// Validate email
+			if (!emailRegex.test(email)) {
+				alert("Invalid email address.");
+				return false;
+			}
+
+			// Validate name
+			if (!nameRegex.test(name)) {
+				alert("Name can only contain letters and spaces.");
+				return false;
+			}
+
+			// Validate phone number
+			if (!phoneRegex.test(phone)) {
+				alert("Phone number must be 10 digits.");
+				return false;
+			}
+
+			// Validate address
+			if (address === "") {
+				alert("Address field cannot be empty.");
+				return false;
+			}
+
+			// Validate date of birth
+			if (!dobRegex.test(dob)) {
+				alert("Invalid date of birth. Please use format YYYY-MM-DD.");
+				return false;
+			}
+
+			// If all fields are valid, submit the form
+			alert("Form submitted successfully!");
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<form onsubmit="return validateForm()">
+		<label for="email">Email:</label>
+		<input type="email" id="email" required><br>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" required><br>
+
+		<label for="phone">Phone Number:</label>
+		<input type="tel" id="phone" required><br>
+
+		<label for="address">Address:</label>
+		<textarea id="address" rows="4" cols="50" required></textarea><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" required><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
