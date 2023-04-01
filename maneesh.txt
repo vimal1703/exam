@@ -1,1 +1,3 @@
 https://github.com/Maneeshpraveen/stocks
+
+https://github.com/sharonsamsimpson/Javascript
