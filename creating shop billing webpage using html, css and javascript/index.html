@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Market Billing System</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    
+    <body>
+
+        <div class="container bg-danger text-white p-3">
+            <h1 class="display-4 text-center">Market Billing System</h1>
+        </div>
+       
+        <div class="container-fluid">
+            <div class="row content bg-success">
+                <div class="col-sm-4 bg-info text-center text-white p-sm-0">
+                    <form class="was-validation pl-sm-2 bg-dark">
+
+                        <div class = "form-row pr-2">
+                            <label for="person_name" class="col-sm-4 text-left fruit-input">Person_Name : </label>
+                            <input type="text" class='v' id="person_name" name="person_name" placeholder="person_name" required>
+                        </div>
+                        <div class = "form-row pr-2">
+                            <label for="phone_no." class="col-sm-4 text-left fruit-input">phone_no : </label>
+                            <input type="tel" id="phone" name="phone" class='v'  placeholder="person_NO." >
+                        </div>
+                        
+                        <div class = "form-row pr-2">
+                            <label for="address" class="col-sm-4 text-left fruit-input">address: </label>
+                            <textarea rows="3" cols="30" name="comment" f orm="usrform">address...</textarea>
+                        </div>
+                        <div class="form-row pr-2">
+                            <label for="fruit-name" class="col-sm-4 text-left fruit-input">Item Name : </label>
+                            <input type="text" class='col-sm-7 mb-sm-2 form-control' id="fruit-name" name="fruit-name" placeholder="Item name" required>
+                        </div>
+                        <div class = "form-row pr-2">
+                            <label for="Id" class="col-sm-4 text-left fruit-input">Id : </label>
+                            <input type="number" class='v' id="id" name="person_name" placeholder="id" required>
+                        </div>
+                        
+                        <div class="form-row pr-2">
+                            <label for="fruit-price" class="col-sm-4 text-left fruit-input">Item Price : </label>
+                            <input type="number" class="col-sm-7 mb-sm-2 form-control" id="fruit-price" name="fruit-price" required>
+                        </div> 
+    
+                        <div class="form-row pr-2 form-group">
+                            <label for="fruit-quantity" class="col-sm-4 text-left fruit-input">Quantity : </label>
+							<input type="number" class="col-sm-7 mb-sm-2 form-control" id="fruit-quantity" name="fruit-quantity" required>
+                        </div>
+
+                        <div class = "form-row pr-2">
+                            <label for="person_name" class="col-sm-4 text-left fruit-input">brand : </label>
+                            <input type="text" class='v' id="brand" name="person_name" placeholder="brand" required>
+                        </div>
+                        
+                        <div class="container">
+                            <button type="submit" class="btn btn-primary btn-block" id="add-btn">Add</button> <br>
+                            <button type="button" class="btn btn-info mb-sm-2" id="fruit-basket">View Item Basket</button>
+                            <button type="button" class="btn btn-info mb-sm-2" id="total-price">View Total Price</button>
+                        </div>
+                    </form>
+
+                    <div class="total bg-info hidden" id="total-div">
+                       
+                    </div>
+                </div>
+        
+                <div class="col-sm-8 container-fluid hidden" id="list">
+                    
+                </div>
+            </div>
+    
+        </div>
+        
+        <script src="app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
